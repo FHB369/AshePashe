@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageView
+        android:id="@+id/bg_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_bg"
+        tools:ignore="VectorDrawableCompat"
+        />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="30dp"
+        android:src="@drawable/tab_btn_left_enabled"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="30dp"
+        android:gravity="center"
+        >
+
+        <EditText
+            android:id="@+id/email_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:hint="ইমেইল"
+            android:layout_marginTop="50dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <EditText
+            android:id="@+id/password_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="পাসওয়ার্ড"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="20dp"
+            />
+
+        <Button
+            android:id="@+id/btn_sign_in"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="সাইন ইন"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_corners_dark"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/shadow_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="30dp"
+        android:src="@drawable/tab_btn_left_enabled"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar_sign_in"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+
+</RelativeLayout>

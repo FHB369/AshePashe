@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_bg"
+        tools:ignore="VectorDrawableCompat"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingHorizontal="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/gen"
+                android:layout_width="134dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/ic_gen_sign_up_enabled"
+                />
+
+            <Button
+                android:id="@+id/sp"
+                android:layout_width="134dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/ic_sp_sign_up_enabled"
+                />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fragment_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="50dp"
+            android:paddingHorizontal="30dp">
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

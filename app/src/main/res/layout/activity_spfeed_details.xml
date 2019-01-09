@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SPFeedDetails">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/detail_sp_cover_photo"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@color/mapbox_blue"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/detail_sp_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ad Title will be shown here"
+                android:textSize="22sp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/dark_blue"/>
+
+            <TextView
+                android:id="@+id/detail_sp_catagory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Catagory"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="20dp"
+                android:textColor="@color/blue"/>
+
+            <TextView
+                android:id="@+id/detail_sp_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ad Title will be shown here Ad Title will be shown here Ad Title will be shown here Ad Title will be shown here"
+                android:textSize="16sp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/dark"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/sp_feed_details_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4.5"
+                    android:textAlignment="center"
+                    android:textSize="40dp"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rated by 100"
+                    android:textAlignment="center"
+                    android:id="@+id/sp_feed_reviewers"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজ ১"
+                        android:textAlignment="center"
+                        android:textSize="16dp"
+                        android:textColor="@color/blue"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"/>
+                    <TextView
+                        android:id="@+id/detail_sp_pack_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        android:textColor="@color/dark"
+                        android:layout_margin="5dp"/>
+                    <TextView
+                        android:id="@+id/detail_sp_pack_1_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজ ১"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        android:textColor="@color/dark_blue"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজ ২"
+                        android:textAlignment="center"
+                        android:textSize="16dp"
+                        android:textColor="@color/blue"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"/>
+                    <TextView
+                        android:id="@+id/detail_sp_pack_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        android:textColor="@color/dark"
+                        android:layout_margin="5dp"/>
+                    <TextView
+                        android:id="@+id/detail_sp_pack_2_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজ ১"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        android:textColor="@color/dark_blue"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজ ৩"
+                        android:textAlignment="center"
+                        android:textSize="16dp"
+                        android:textColor="@color/blue"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"/>
+                    <TextView
+                        android:id="@+id/detail_sp_pack_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        android:textColor="@color/dark"
+                        android:layout_margin="5dp"/>
+                    <TextView
+                        android:id="@+id/detail_sp_pack_3_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজ ১"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        android:textColor="@color/dark_blue"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/detail_sp_edit_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corners_blue"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginBottom="20dp"
+                android:text="এডিট করুণ"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

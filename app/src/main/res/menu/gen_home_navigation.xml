@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_near_me_gen"
+        android:icon="@drawable/ic_near_me_black_24dp"
+        android:title="নিকটবর্তী" />
+    <item
+        android:id="@+id/navigation_search_gen"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="সার্চ" />
+
+    <item
+        android:id="@+id/navigation_requests_gen"
+        android:icon="@drawable/ic_request_24dp"
+        android:title="আমার অনুরোধসমুহ" />
+
+    <item
+        android:id="@+id/navigation_profile_gen"
+        android:icon="@drawable/ic_account_circle_black_24dp"
+        android:title="প্রোফাইল" />
+
+</menu>

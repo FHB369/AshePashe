@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Ashepashe</string>
+    <string name="facebook_app_id">276566489693223</string>
+    <string name="fb_login_protocol_scheme">fb276566489693223</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_sp__home">SP_Home</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_gen__home">GEN_Home</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoiZmhiMzY5IiwiYSI6ImNqcWY2anlhdjAzM3A0M21ibTU2bWx1ajcifQ.xSuQ4wgSW5j4L9ttItd9cw</string>
+
+    <string-array name="service_catagory">
+        <item>ক্যাটাগরি সিলেক্ট করুণ</item>
+        <item>মেরামত</item>
+        <item>লন্ড্রি</item>
+        <item>যানবাহন</item>
+        <item>খাদ্যসামগ্রী</item>
+        <item>পরিষ্কার পরিচ্ছন্নতা</item>
+        <item>বাসা পরিবর্তন</item>
+        <item>স্বাস্থ্যচর্চা</item>
+        <item>অন্যান্য</item>
+    </string-array>
+
+    <string-array name="search_catagory">
+        <item>সব ক্যাটাগরি</item>
+        <item>মেরামত</item>
+        <item>লন্ড্রি</item>
+        <item>যানবাহন</item>
+        <item>খাদ্যসামগ্রী</item>
+        <item>পরিষ্কার পরিচ্ছন্নতা</item>
+        <item>বাসা পরিবর্তন</item>
+        <item>স্বাস্থ্যচর্চা</item>
+        <item>অন্যান্য</item>
+    </string-array>
+
+</resources>

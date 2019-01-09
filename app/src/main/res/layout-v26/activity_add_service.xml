@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddService">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="20dp">
+
+            <Spinner
+                android:id="@+id/spinner_catagory"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/blue"
+                />
+
+            <ImageButton
+                android:id="@+id/service_cover_photo"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:contentDescription="Cover Image"
+                android:padding="5dp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/service_title"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="শিরোনাম"
+                android:inputType="text"
+                android:textColor="@android:color/black"/>
+
+            <EditText
+                android:id="@+id/service_description"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="বিস্তারিত"
+                android:inputType="textMultiLine"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="প্যাকেজ ১"
+                android:textSize="17sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/service_package_1"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="প্যাকেজের বর্ননা"/>
+
+            <EditText
+                android:id="@+id/service_package_1_price"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="প্যাকেজের মূল্য"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="প্যাকেজ ২"
+                android:textSize="17sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/service_package_2"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="প্যাকেজের বর্ননা"/>
+
+            <EditText
+                android:id="@+id/service_package_2_price"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="প্যাকেজের মূল্য"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="প্যাকেজ ৩"
+                android:textSize="17sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/service_package_3"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="প্যাকেজের বর্ননা"/>
+
+            <EditText
+                android:id="@+id/service_package_3_price"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="প্যাকেজের মূল্য"/>
+
+            <Button
+                android:id="@+id/btn_set_location"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="কভারেজ এলাকা সিলেক্ট করুণ"
+                android:background="@drawable/rounded_corners_dark_blue"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:layout_marginHorizontal="40dp"
+                android:shadowDy="5"/>
+
+            <Button
+                android:id="@+id/service_submit"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="সেবা যোগ করুণ"
+                android:background="@drawable/rounded_corners_blue"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:layout_marginHorizontal="40dp"
+                android:shadowDy="5"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/shadow_add_service"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@drawable/tab_btn_left_enabled"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar_add_service"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:text="নতুন সার্ভিস যোগ করুণ"
+        android:background="@color/dark_blue"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        android:paddingVertical="20dp"
+        android:clickable="false"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_chevron_left_black_24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"/>
+
+
+</RelativeLayout>

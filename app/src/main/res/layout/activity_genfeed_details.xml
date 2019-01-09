@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SPFeedDetails">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/detail_gen_cover_photo"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@color/colorPrimary"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/detail_gen_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ad Title will be shown here"
+                android:textSize="22sp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/dark_blue"/>
+
+            <TextView
+                android:id="@+id/detail_gen_catagory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Catagory"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="20dp"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/detail_gen_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ad Title will be shown here Ad Title will be shown here Ad Title will be shown here Ad Title will be shown here"
+                android:textSize="16sp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/dark"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/gen_feed_details_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4.5"
+                    android:textAlignment="center"
+                    android:textSize="40dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rated by 100"
+                    android:textAlignment="center"
+                    android:id="@+id/gen_feed_reviewers"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="সার্ভিসটি পেতে নিচের যেকোন প্যাকেজের উপর ট্যাপ করুণ"
+                android:textSize="14sp"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:layout_marginHorizontal="20dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="20dp"
+                android:id="@+id/gen_feed_package_1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজ ১"
+                        android:textAlignment="center"
+                        android:textSize="16dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"/>
+                    <TextView
+                        android:id="@+id/detail_gen_pack_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        android:textColor="@color/dark"
+                        android:layout_margin="5dp"/>
+                    <TextView
+                        android:id="@+id/detail_gen_pack_1_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজ ১"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        android:textColor="@color/dark_blue"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="20dp"
+                android:id="@+id/gen_feed_package_2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজ ২"
+                        android:textAlignment="center"
+                        android:textSize="16dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"/>
+                    <TextView
+                        android:id="@+id/detail_gen_pack_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        android:textColor="@color/dark"
+                        android:layout_margin="5dp"/>
+                    <TextView
+                        android:id="@+id/detail_gen_pack_2_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজ ১"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        android:textColor="@color/dark_blue"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="20dp"
+                android:id="@+id/gen_feed_package_3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজ ৩"
+                        android:textAlignment="center"
+                        android:textSize="16dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"/>
+                    <TextView
+                        android:id="@+id/detail_gen_pack_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১ প্যাকেজ ১"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        android:textColor="@color/dark"
+                        android:layout_margin="5dp"/>
+                    <TextView
+                        android:id="@+id/detail_gen_pack_3_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাকেজ ১"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        android:textColor="@color/dark_blue"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

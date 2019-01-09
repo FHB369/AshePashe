@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentGENSearch">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/search_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners_grey"
+            android:hint="Search"
+            android:padding="13dp"
+            android:layout_margin="15dp"
+            android:textColor="@color/dark_blue"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:paddingBottom="10dp">
+
+            <Spinner
+                android:id="@+id/search_catagory"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_corners"
+                android:gravity="center"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_corners_white"
+                android:text="Search"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginHorizontal="15dp"
+                android:paddingHorizontal="30dp"/>
+
+        </LinearLayout>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/search_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

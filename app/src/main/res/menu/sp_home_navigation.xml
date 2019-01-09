@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item
+    android:id="@+id/navigation_dashboard_sp"
+    android:icon="@drawable/ic_dashboard_black_24dp"
+    android:title="ড্যাশবোর্ড" />
+
+<item
+    android:id="@+id/navigation_requests_sp"
+    android:icon="@drawable/ic_request_24dp"
+    android:title="অনুরোধসমূহ" />
+
+<item
+    android:id="@+id/navigation_services_sp"
+    android:icon="@drawable/ic_chrome_reader_mode_black_24dp"
+    android:title="সেবাসমুহ" />
+
+<item
+    android:id="@+id/navigation_profile_sp"
+    android:icon="@drawable/ic_account_circle_black_24dp"
+    android:title="প্রোফাইল" />
+
+</menu>

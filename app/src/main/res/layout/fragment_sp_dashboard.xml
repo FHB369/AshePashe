@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="50"
+            android:background="@color/dark_blue"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="স্বাগতম"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="35dp"
+                android:layout_marginBottom="50dp"/>
+
+            <Button
+                android:id="@+id/btn_add_service"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corners_blue"
+                android:text="নতুন সার্ভিস যোগ করুণ"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="25"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/pending"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="20"
+                    android:textSize="60dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pending Requests"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_blue"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:background="@color/blue"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/completed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:textSize="60dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Completed Requests"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_blue"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="25"
+            android:orientation="vertical"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/active"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:textSize="80dp"
+                android:layout_gravity="center"
+                android:textColor="@color/dark_blue_light"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active Services"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="@color/blue" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

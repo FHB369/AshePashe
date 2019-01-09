@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpSP">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="30dp"
+        android:src="@drawable/tab_btn_left_enabled"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="30dp"
+        android:gravity="center"
+        >
+
+
+        <ImageButton
+            android:id="@+id/photo_chooser_sp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/rounded_corners"
+            android:shadowDy="20"
+            android:shadowColor="@color/grey"
+            android:shadowDx="10"
+            android:shadowRadius="20"/>
+
+        <EditText
+            android:id="@+id/name_sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="নাম"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="5dp"/>
+
+        <EditText
+            android:id="@+id/email_sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:hint="ইমেইল"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <EditText
+            android:id="@+id/password_sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="পাসওয়ার্ড"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <EditText
+            android:id="@+id/mobile_sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="phone"
+            android:hint="মোবাইল নাম্বার"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="20dp"
+            />
+
+        <Button
+            android:id="@+id/btn_sign_up_sp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="সাইন আপ"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_corners_dark"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/shadow_sign_up_sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="30dp"
+        android:src="@drawable/tab_btn_left_enabled"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar_sp"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        />
+
+
+</FrameLayout>

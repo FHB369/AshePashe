@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddRating">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="সার্ভিসটির মান কেমন?"
+            android:textAlignment="center"
+            android:textSize="26dp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="33dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginVertical="30dp">
+
+            <Button
+                android:id="@+id/oneStar"
+                android:layout_width="50dp"
+                android:layout_height = "50dp"
+                android:background="@drawable/ic_star_black_24dp"/>
+
+            <Button
+                android:id="@+id/twoStar"
+                android:layout_width="50dp"
+                android:layout_height = "50dp"
+                android:background="@drawable/ic_star_black_24dp"/>
+
+            <Button
+                android:id="@+id/threeStar"
+                android:layout_width="50dp"
+                android:layout_height = "50dp"
+                android:background="@drawable/ic_star_black_24dp"/>
+
+            <Button
+                android:id="@+id/fourStar"
+                android:layout_width="50dp"
+                android:layout_height = "50dp"
+                android:background="@drawable/ic_star_black_24dp"/>
+
+            <Button
+                android:id="@+id/fiveStar"
+                android:layout_width="50dp"
+                android:layout_height = "50dp"
+                android:background="@drawable/ic_star_black_24dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_submit_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="সাবমিট"
+            android:background="@drawable/rounded_corners"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18dp"
+            android:paddingHorizontal="20dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
