@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminAction">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:text="Complain"
+            android:layout_margin="30dp"/>
+
+
+        <Button
+            android:id="@+id/mark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mark as done"
+            android:background="@drawable/rounded_corners"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="50dp"/>
+
+
+        <Button
+            android:id="@+id/call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email Sender"
+            android:background="@drawable/rounded_corners_dark"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="50dp"/>
+
+        <Button
+            android:id="@+id/warn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Warn Service Provider"
+            android:background="@drawable/rounded_corners_dark_blue"
+            android:textColor="@color/mapbox_navigation_route_layer_congestion_red"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="50dp"/>
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete Service"
+            android:background="@drawable/rounded_corners_dark_blue"
+            android:textColor="@color/mapbox_navigation_route_layer_congestion_red"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="50dp"/>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -91,6 +91,14 @@ public class SplashActivity extends AppCompatActivity {
         mDatabaseGEN = FirebaseDatabase.getInstance().getReference().child("USERS").child("GENERAL_USERS");
         mDatabaseSP = FirebaseDatabase.getInstance().getReference().child("USERS").child("SERVICE_PROVIDERS");
 
+        if(FirebaseAuth.getInstance().getCurrentUser().getEmail().equals("admin@ashepashe.com")){
+            Intent intent = new Intent(SplashActivity.this, AdminFeed.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.right_to_left, R.anim.right_to_left_exit);
+            finish();
+            return;
+        }
+
         mDatabaseGEN.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

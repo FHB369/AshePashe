@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminFeed">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/admin_feed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"/>
+
+    <Button
+        android:id="@+id/buttonselection"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:text="Complain List"
+        android:background="@color/dark_blue"
+        android:textColor="@color/mapbox_navigation_route_layer_congestion_red"
+        android:textSize="16sp"
+        android:paddingVertical="20dp"
+        tools:ignore="HardcodedText"
+        android:shadowDy="5"
+        android:shadowRadius="-6"
+        android:shadowColor="@color/dark"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/logOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/mapbox_navigation_route_layer_congestion_red"
+        app:srcCompat="@drawable/ic_power_settings_new_black_24dp"/>
+
+</RelativeLayout>

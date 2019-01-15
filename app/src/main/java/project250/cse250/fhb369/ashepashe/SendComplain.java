@@ -42,7 +42,7 @@ public class SendComplain extends AppCompatActivity {
                     r.child("PACKAGE").setValue(PACK);
                     r.child("REQUEST_ID").setValue(REQ);
                     r.child("MESSAGE").setValue(msg);
-                    r.child("COMPLAINER").setValue(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                    r.child("COMPLAINER").setValue(FirebaseAuth.getInstance().getCurrentUser().getEmail());
 
                     Toast.makeText(getApplicationContext(), "Complain Sent", Toast.LENGTH_SHORT).show();
                     onBackPressed();

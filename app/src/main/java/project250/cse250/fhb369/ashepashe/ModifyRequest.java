@@ -67,6 +67,7 @@ public class ModifyRequest extends AppCompatActivity {
                     status.setText(stats);
                 }else{
                     status.setText(stats);
+                    complain.setVisibility(View.GONE);
                 }
             }
 

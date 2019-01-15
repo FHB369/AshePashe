@@ -90,6 +90,14 @@ public class SignIn extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference().child("USERS").child("GENERAL_USERS");
         mDatabase1 = FirebaseDatabase.getInstance().getReference().child("USERS").child("SERVICE_PROVIDERS");
 
+        if(FirebaseAuth.getInstance().getCurrentUser().getEmail().equals("admin@ashepashe.com")){
+            Intent intent = new Intent(SignIn.this, AdminFeed.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.right_to_left, R.anim.right_to_left_exit);
+            finish();
+            return;
+        }
+
         mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

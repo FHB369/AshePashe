@@ -21,7 +21,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".SendComplain"></activity>
+        <activity android:name=".AdminAction"></activity>
+        <activity android:name=".AdminFeed"
+            android:theme="@style/AppTheme.DarkToolbar"/>
+        <activity android:name=".SendComplain" />
         <activity android:name=".HistoryFeedSP" />
         <activity android:name=".HistoryFeedGen" />
 
