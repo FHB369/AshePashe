@@ -1,6 +1,7 @@
 package project250.cse250.fhb369.ashepashe;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,9 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.onesignal.OneSignal;
 
 public class SP_Home extends AppCompatActivity {
 
@@ -40,12 +44,17 @@ public class SP_Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sp_home);
 
+        FirebaseAuth mAuth =FirebaseAuth.getInstance();
+        if(mAuth.getCurrentUser()!=null) {
+            OneSignal.sendTag("User_ID", (String) mAuth.getCurrentUser().getEmail());
+        }
+
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation_sp);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         loadFragment(new FragmentSPDashboard());
     }
 
-    private void loadFragment(Fragment fragment) {
+    public void loadFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.sp_home_frame, fragment);
         transaction.addToBackStack(null);
@@ -70,11 +79,34 @@ public class SP_Home extends AppCompatActivity {
 
     }
 
+//    @Override
+////    public void onBackPressed() {
+////        popBackStackTillEntry(0);
+////        moveTaskToBack(true);
+////        loadFragment(new FragmentSPDashboard());
+////    }
+
+    boolean doubleBackToExitPressedOnce = false;
+
     @Override
     public void onBackPressed() {
-        popBackStackTillEntry(0);
-        moveTaskToBack(true);
-        System.exit(0);
+        if (doubleBackToExitPressedOnce) {
+            popBackStackTillEntry(0);
+            moveTaskToBack(true);
+            System.exit(0);
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        loadFragment(new FragmentSPDashboard());
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
     }
 
 }

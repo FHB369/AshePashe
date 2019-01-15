@@ -85,6 +85,7 @@ public class FragmentGENProfile extends Fragment {
 
         Button editProfile = v.findViewById(R.id.gen_edit_profile_btn);
         Button signOut = v.findViewById(R.id.gen_log_out_btn);
+        Button history = v.findViewById(R.id.gen_history_btn);
 
         String UID = FirebaseAuth.getInstance().getCurrentUser().getUid();
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference().child("USERS").child("GENERAL_USERS").child(UID);
@@ -94,7 +95,7 @@ public class FragmentGENProfile extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 name.setText(dataSnapshot.child("NAME").getValue().toString());
                 email.setText(dataSnapshot.child("EMAIL").getValue().toString());
-                Picasso.get().load(dataSnapshot.child("PHOTO").getValue().toString()).resize(400,400).transform(new CircleTransform()).into(image);
+                Picasso.get().load(dataSnapshot.child("PHOTO").getValue().toString()).resize(300,300).transform(new CircleTransform()).into(image);
             }
 
             @Override
@@ -109,6 +110,7 @@ public class FragmentGENProfile extends Fragment {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(getActivity(), SplashActivity.class);
                 startActivity(intent);
+                getActivity().finish();
             }
         });
 
@@ -116,6 +118,14 @@ public class FragmentGENProfile extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), EditProfileGEN.class);
+                startActivity(intent);
+            }
+        });
+
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), HistoryFeedGen.class);
                 startActivity(intent);
             }
         });

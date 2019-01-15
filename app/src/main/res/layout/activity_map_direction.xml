@@ -15,6 +15,13 @@
         mapbox:mapbox_styleUrl="mapbox://styles/mapbox/streets-v10"
         mapbox:mapbox_cameraZoom="12" />
 
+    <ProgressBar
+        android:id="@+id/progress_load_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
     <Button
         android:layout_width="250dp"
         android:layout_height="50dp"

@@ -14,7 +14,7 @@
 <item
     android:id="@+id/navigation_services_sp"
     android:icon="@drawable/ic_chrome_reader_mode_black_24dp"
-    android:title="সেবাসমুহ" />
+    android:title="সার্ভিসগুলো" />
 
 <item
     android:id="@+id/navigation_profile_sp"

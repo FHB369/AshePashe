@@ -17,8 +17,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class RequestDetailSP extends AppCompatActivity {
 
-    private TextView title, pack, status, user;
-    private Button contact, direction;
+    private TextView title, pack, user;
+    private Button contact, direction, status, cancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,7 @@ public class RequestDetailSP extends AppCompatActivity {
 
         contact = findViewById(R.id.btn_req_contact_sp);
         direction = findViewById(R.id.btn_req_direction_sp);
+        cancel = findViewById(R.id.btn_req_cancel_sp);
 
         String refKey = getIntent().getExtras().getString("REF");
         String stat = getIntent().getExtras().getString("STAT");
@@ -41,15 +42,32 @@ public class RequestDetailSP extends AppCompatActivity {
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String ADD = (String) dataSnapshot.child("ADDRESS").getValue();
+                String TIME = (String) dataSnapshot.child("TIME").getValue();
+
                 title.setText((String) dataSnapshot.child("TITLE").getValue());
                 pack.setText((String) dataSnapshot.child("PACKAGE").getValue());
-                status.setText((String) dataSnapshot.child("STATUS").getValue());
+                String STAT = (String) dataSnapshot.child("STATUS").getValue();
+                if(STAT.equals("REQUESTED")){
+                    status.setText("ACCEPT");
+                    contact.setVisibility(View.GONE);
+                    direction.setVisibility(View.GONE);
+                }else if(STAT.equals("PENDING")){
+                    status.setText("PENDING");
+                    cancel.setVisibility(View.GONE);
+                }else if(STAT.equals("DONE")){
+                    status.setText("DONE");
+                    cancel.setVisibility(View.GONE);
+                    contact.setVisibility(View.GONE);
+                    direction.setVisibility(View.GONE);
+                }
                 String re = (String) dataSnapshot.child("SENDER").getValue();
                 DatabaseReference rf = FirebaseDatabase.getInstance().getReference().child("USERS").child("GENERAL_USERS").child(re);
                 rf.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        user.setText((String) dataSnapshot.child("NAME").getValue());
+                        String detail = (String) dataSnapshot.child("NAME").getValue()+"\nAddress: "+ADD+"\n Deadline: "+TIME;
+                        user.setText(detail);
                     }
 
                     @Override
@@ -119,5 +137,52 @@ public class RequestDetailSP extends AppCompatActivity {
             }
         });
 
+        status.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(stat.equals("REQUESTED")){
+                    ref.child("STATUS").setValue("PENDING");
+                    status.setText("PENDING");
+
+                    ref.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            String sender = (String) dataSnapshot.child("SENDER").getValue();
+                            String title = (String) dataSnapshot.child("TITLE").getValue();
+
+                            DatabaseReference rrrr = FirebaseDatabase.getInstance().getReference().child("USERS/GENERAL_USERS").child(sender);
+                            rrrr.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                    String email = (String) dataSnapshot.child("EMAIL").getValue();
+                                    PushNotification pushNotification = new PushNotification(email, "Your request for "+title+"is accepted");
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                }
+                            });
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+                    contact.setVisibility(View.VISIBLE);
+                    direction.setVisibility(View.VISIBLE);
+                    cancel.setVisibility(View.GONE);
+                }
+            }
+        });
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+                finish();
+                ref.removeValue();
+            }
+        });
     }
 }

@@ -114,6 +114,7 @@ public class SignIn extends AppCompatActivity {
                     Intent intent = new Intent(SignIn.this, SP_Home.class);
                     startActivity(intent);
                     overridePendingTransition(R.anim.right_to_left, R.anim.right_to_left_exit);
+                    finish();
                 }
             }
 

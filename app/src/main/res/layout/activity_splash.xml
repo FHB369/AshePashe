@@ -12,7 +12,8 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/ic_bg_splash" />
+        app:srcCompat="@drawable/ic_bg_splash"
+        tools:ignore="ContentDescription" />
 
     <ProgressBar
         android:layout_width="wrap_content"

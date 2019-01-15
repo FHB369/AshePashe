@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -53,6 +54,7 @@ public class MapDirection extends AppCompatActivity{
     private Marker destinationMarker;
     private LatLng originCoord;
     private LatLng destinationCoord;
+    private ProgressBar progressBar;
 
     private Point originPosition;
     private Point destinationPosition;
@@ -72,6 +74,8 @@ public class MapDirection extends AppCompatActivity{
         Mapbox.getInstance(this, getString(R.string.mapbox_access_token));
         setContentView(R.layout.activity_map_direction);
 
+        progressBar = findViewById(R.id.progress_load_map);
+
         client = LocationServices.getFusedLocationProviderClient(getApplicationContext());
         client.getLastLocation().addOnSuccessListener(new OnSuccessListener<Location>() {
             @Override
@@ -87,6 +91,9 @@ public class MapDirection extends AppCompatActivity{
 
 
         start = findViewById(R.id.btn_nav_start);
+
+        start.setVisibility(View.GONE);
+
         mapView=findViewById(R.id.mapViewDirection);
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(new OnMapReadyCallback() {
@@ -170,6 +177,9 @@ public class MapDirection extends AppCompatActivity{
                             navigationMapRoute = new NavigationMapRoute(null, mapView, mapboxMap, R.style.NavigationMapRoute);
                         }
                         navigationMapRoute.addRoute(currentRoute);
+
+                        start.setVisibility(View.VISIBLE);
+                        progressBar.setVisibility(View.GONE);
                     }
 
                     @Override

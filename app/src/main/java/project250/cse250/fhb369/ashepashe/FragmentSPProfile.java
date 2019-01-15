@@ -95,7 +95,7 @@ public class FragmentSPProfile extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 name.setText(dataSnapshot.child("NAME").getValue().toString());
                 email.setText(dataSnapshot.child("EMAIL").getValue().toString());
-                Picasso.get().load(dataSnapshot.child("PHOTO").getValue().toString()).transform(new CircleTransform()).into(image);
+                Picasso.get().load(dataSnapshot.child("PHOTO").getValue().toString()).resize(300,300).transform(new CircleTransform()).into(image);
             }
 
             @Override
@@ -110,6 +110,7 @@ public class FragmentSPProfile extends Fragment {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(getActivity(), SplashActivity.class);
                 startActivity(intent);
+                getActivity().finish();
             }
         });
 

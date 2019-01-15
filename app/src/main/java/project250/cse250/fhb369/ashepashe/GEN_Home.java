@@ -9,6 +9,7 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
@@ -21,17 +22,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.mapbox.mapboxsdk.geometry.LatLng;
+import com.onesignal.OneSignal;
 
 public class GEN_Home extends AppCompatActivity {
 
@@ -68,6 +72,11 @@ public class GEN_Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_gen_home);
+
+        FirebaseAuth mAuth =FirebaseAuth.getInstance();
+        if(mAuth.getCurrentUser()!=null) {
+            OneSignal.sendTag("User_ID", (String) mAuth.getCurrentUser().getEmail());
+        }
 
         SharedPreferences prefs = getSharedPreferences("CURRENT", MODE_PRIVATE);
         String lat = prefs.getString("LAT", "0");
@@ -132,10 +141,33 @@ public class GEN_Home extends AppCompatActivity {
 
     }
 
+//    @Override
+//    public void onBackPressed() {
+//        popBackStackTillEntry(0);
+//        moveTaskToBack(true);
+//        System.exit(0);
+//    }
+
+    boolean doubleBackToExitPressedOnce = false;
+
     @Override
     public void onBackPressed() {
-        popBackStackTillEntry(0);
-        moveTaskToBack(true);
-        System.exit(0);
+        if (doubleBackToExitPressedOnce) {
+            popBackStackTillEntry(0);
+            moveTaskToBack(true);
+            System.exit(0);
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        loadFragment(new FragmentGENNearMe());
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
     }
 }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SendComplain">
+
+    <EditText
+        android:id="@+id/editText_complain"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:ems="10"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:inputType="textMultiLine"
+        android:background="#362196F3"
+        android:padding="5dp"
+        android:hint="আপনার অভিযোগ সম্পর্কে লিখুন"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/submit_complain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/rounded_corners_dark_blue"
+        android:textColor="@color/blue"
+        android:text="সাবমিট"
+        android:textSize="18sp" />
+</RelativeLayout>

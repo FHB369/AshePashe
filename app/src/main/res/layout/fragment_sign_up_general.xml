@@ -18,6 +18,10 @@
         android:src="@drawable/tab_btn_left_enabled"
         />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -94,6 +98,8 @@
             android:background="@drawable/rounded_corners_dark"/>
 
     </LinearLayout>
+
+    </ScrollView>
 
     <ImageView
         android:id="@+id/shadow_sign_up_gen"

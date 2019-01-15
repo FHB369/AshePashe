@@ -18,6 +18,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class RequestAdapterSP extends RecyclerView.Adapter<RequestAdapterSP.RequestViewHolder> {
     Context context;
@@ -26,7 +27,7 @@ public class RequestAdapterSP extends RecyclerView.Adapter<RequestAdapterSP.Requ
     public RequestAdapterSP(Context context, DatabaseReference ref, String UID){
         this.context = context;
 
-        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+        ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 items.clear();
@@ -37,10 +38,11 @@ public class RequestAdapterSP extends RecyclerView.Adapter<RequestAdapterSP.Requ
                     String status = (String) postSnapShot.child("STATUS").getValue();
                     String reciever = (String) postSnapShot.child("RECIEVER").getValue();
                     String key = (String) postSnapShot.getKey();
-
-                    if(reciever!=null && reciever.equals(UID) && status.equals("PENDING")){
-                        RequestItem item = new RequestItem(title, date, pack, status, key);
-                        items.add(item);
+                    if(status!=null) {
+                        if (reciever != null && reciever.equals(UID) && !status.equals("DONE")) {
+                            RequestItem item = new RequestItem(title, date, pack, status, key);
+                            items.add(item);
+                        }
                     }
                 }
                 notifyDataSetChanged();

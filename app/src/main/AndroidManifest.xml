@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
+        android:name=".ApplicationClass"
         android:allowBackup="true"
         android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         android:icon="@mipmap/ic_launcher"
@@ -20,6 +21,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:appComponentFactory">
+        <activity android:name=".SendComplain"></activity>
+        <activity android:name=".HistoryFeedSP" />
+        <activity android:name=".HistoryFeedGen" />
+
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
@@ -89,7 +94,7 @@
         <activity android:name=".AddRating" />
         <activity android:name=".RatingDone" />
         <activity android:name=".RequestDetailSP" />
-        <activity android:name=".MapDirection"></activity>
+        <activity android:name=".MapDirection" />
     </application>
 
 </manifest>

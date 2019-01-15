@@ -26,7 +26,7 @@ public class RequestAdapterGEN extends RecyclerView.Adapter<RequestAdapterGEN.Re
     public RequestAdapterGEN(Context context, DatabaseReference ref, String UID){
         this.context = context;
 
-        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+        ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 items.clear();
@@ -38,9 +38,11 @@ public class RequestAdapterGEN extends RecyclerView.Adapter<RequestAdapterGEN.Re
                     String sender = (String) postSnapShot.child("SENDER").getValue();
                     String key = (String) postSnapShot.getKey();
 
-                    if(sender!=null && sender.equals(UID) && status.equals("PENDING")){
-                        RequestItem item = new RequestItem(title, date, pack, status, key);
-                        items.add(item);
+                    if(status!=null) {
+                        if (sender != null && sender.equals(UID) && !status.equals("DONE")) {
+                            RequestItem item = new RequestItem(title, date, pack, status, key);
+                            items.add(item);
+                        }
                     }
                 }
                 notifyDataSetChanged();
@@ -63,7 +65,7 @@ public class RequestAdapterGEN extends RecyclerView.Adapter<RequestAdapterGEN.Re
 
     @Override
     public void onBindViewHolder(@NonNull RequestViewHolder requestViewHolder, int i) {
-        RequestItem item = items.get(i);
+        RequestItem item = items.get(items.size()-i-1);
         requestViewHolder.TITLE.setText(item.getTitle());
         requestViewHolder.DATE.setText(item.getDate());
         requestViewHolder.PACKAGE.setText(item.getPkg());

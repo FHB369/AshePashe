@@ -6,10 +6,13 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -83,6 +86,10 @@ public class FragmentSPDashboard extends Fragment {
         TextView completed = v.findViewById(R.id.completed);
         TextView active = v.findViewById(R.id.active);
 
+        LinearLayout pendingAds = v.findViewById(R.id.pending_req_sp);
+        LinearLayout activeAds = v.findViewById(R.id.active_ads_sp);
+        LinearLayout completedAds = v.findViewById(R.id.sp_history_btn);
+
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("REQUESTS");
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -136,6 +143,38 @@ public class FragmentSPDashboard extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), AddService.class);
+                startActivity(intent);
+            }
+        });
+
+        pendingAds.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new FragmentSPRequests();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.sp_home_frame, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
+        activeAds.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new FragmentSPServices();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.sp_home_frame, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
+        completedAds.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), HistoryFeedSP.class);
                 startActivity(intent);
             }
         });

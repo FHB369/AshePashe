@@ -47,6 +47,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/pending_req_sp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="50"
@@ -59,7 +60,7 @@
                     android:id="@+id/pending"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="20"
+                    android:text="NA"
                     android:textSize="60dp"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
@@ -74,6 +75,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/sp_history_btn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="50"
@@ -86,7 +88,7 @@
                     android:id="@+id/completed"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="10"
+                    android:text="NA"
                     android:textSize="60dp"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
@@ -102,6 +104,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/active_ads_sp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="25"
@@ -113,7 +116,7 @@
                 android:id="@+id/active"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4"
+                android:text="NA"
                 android:textSize="80dp"
                 android:layout_gravity="center"
                 android:textColor="@color/dark_blue_light"/>
